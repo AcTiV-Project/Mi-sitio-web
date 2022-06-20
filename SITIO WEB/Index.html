@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Diseño CSS-->
+    <link rel="stylesheet" href="Diseño.css">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--JavaScript-->
+    <script src="Main.js"></script>
+    <!--Google Analityc-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D71SSB1LC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1D71SSB1LC');
+    </script>
+    <!--Google Adsense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272908671735315"
+    crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="/Imagenes/codigo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tkinter, Botones-tkinter, Label-tkinter, Cajas de texto-tkinter Radiobuttom-tkinter, Checkbuttom-tkinter, Menu-tkinter, ventanas emergentes-tkinter">
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="Contenedor">
+        <header class="header">
+            <h1>Tutorial Basico</h1>
+            <a class="btn" href="informacion.html">Informacion</a>
+        </header>
+
+        <nav class="nav">
+            <a id="list1" href="#Ventana">Ventana</a>
+            <a id="list2" href="#Boton">Boton</a>
+            <a id="list3" href="#Etiqueta">Etiqueta</a>
+            <a id="list4" href="#Caja">Caja de texto</a>
+            <a id="list5" href="#Radio">Radiobuttom</a>
+            <a id="list6" href="#Check">Checkbuttom</a>
+            <a id="list7" href="#menu">Menu</a>
+            <a id="list8" href="#VE">Ventanas Emergentes</a>
+        </nav>
+
+        <section class="main">
+            <article>
+                <h1>Tkinter</h1>
+                <p>
+                 Tkinter es una biblioteca gráfica y es usada para crear interfaces gráficas para nuestros proyectos desarrollados con Python. A continuación se presentara todo lo básico de esta herramienta desde cómo crear una ventana, botón, etiquetas, cajas de texto, ventanas emergentes, radiobuttom, checkbuttom, menús y más.
+                </p>
+            </article>
+
+            <hr>
+
+            <h1 id="Ventana">Ventana Grafica</h1>
+            <article class="codigo">
+                <code>from tkinter import *</code> <br> <br>
+                <code>root = Tk()</code> <br>
+                <code>root.geometry("300x300")</code> <br>
+                <code>root.title("Hello World")</code> <br> <br>
+                <code>root.mainloop()</code>
+            </article>
+            <img src="/Imagenes/v.png" alt="imagen">
+
+            <h3>Icono a la ventana</h3>
+
+            <article class="codigo">
+                <code>root.iconbitmap("image.ico")</code>
+            </article>
+
+            <h3>Redimensión de ventana</h3>
+
+            <article class="codigo">
+                <code>root.resizable(0,0)</code>
+            </article>
+
+            <hr>
+
+            <h1 id="Boton">Botón</h1>
+
+            <article class="codigo">
+                <code>from tkinter import *</code> <br><br>
+                <code>root = Tk()</code> <br>
+                <code>root.geometry("300x300")</code> <br>
+                <code>Button(root, text="Click Here").pack()</code> <br><br>
+                <code>root.mainloop()</code>
+            </article>
+            <img src="/Imagenes/btn.png" alt="btn.png">
+
+            <h3>Color de fondo para el  botón</h3>
+            <article class="codigo">
+                <code>Button(root, text="Click", bg="#3174B6").pack()</code>
+            </article>
+
+            <h3>Color al texto del botón</h3>
+            <article class="codigo">
+                <code>Button(root, text="Click", fg="#3174B6").pack()</code>
+            </article>
+
+            <hr>
+
+            <h1 id="Etiqueta">Etiquetas</h1>
+
+            <article class="codigo">
+                <code>from tkinter import *</code> <br><br>
+                <code>root = Tk()</code> <br>
+                <code>root.geometry("300x300")</code> <br>
+                <code>Label(root, text="Hello World").pack()</code> <br><br>
+                <code>root.mainloop()</code>
+            </article>
+            <img src="/Imagenes/e.png" alt="e.png">
+
+            <h3>Color al texto</h3>
+            <article class="codigo">
+                <code>Label(root, text="Hello World", fg="blue").pack()</code>
+            </article>
+
+            <hr>
+
+            <h1 id="Caja">Cajas de texto</h1>
+
+            <article class="codigo">
+                <code>from tkinter import *</code> <br><br>
+                <code>root = Tk()</code><br>
+                <code>root.geometry("300x300")</code><br>
+                <code>entry = Entry(root).pack()</code> <br><br>
+                <code>root.mainloop()</code>
+            </article>
+            <img src="/Imagenes/Caja.png" alt="Caja.png">
+
+            <hr>
+
+            <h1 id="Radio">Radiobuttom</h1>
+
+            <article class="codigo">
+                <code>from tkinter import *</code> <br><br>
+                <code>root = Tk()</code> <br>
+                <code>root.geometry("300x300")</code> <br>
+                <code>Radiobutton(root, text="Option1", value=1).pack()</code> <br>
+                <code>Radiobutton(root, text="Option2", value=2).pack()</code> <br>
+                <code>Radiobutton(root, text="Option3", value=3).pack()</code> <br><br>
+                <code>root.mainloop()</code>
+            </article>
+            <img src="/Imagenes/r.png" alt="r.png">
+
+            <hr>
+
+            <h1 id="Check">Checkbuttom</h1>
+    
+            <article class="codigo">
+                <code>from tkinter import *</code> <br><br>
+                <code>root = Tk()</code> <br>
+                <code>root.geometry("300x300")</code> <br>
+                <code>Checkbutton(root, text="Option1").pack()</code> <br>
+                <code>Checkbutton(root, text="Option2").pack()</code> <br>
+                <code>Checkbutton(root, text="Option3").pack()</code> <br><br>
+                <code>root.mainloop()</code>
+            </article>
+            <img src="/Imagenes/Check.png" alt="Check.png">
+
+            <hr>
+
+            <h1 id="menu">Menú</h1>
+            <article class="codigo">
+                <code>from tkinter import *</code> <br><br>
+                <code>root = Tk()</code> <br>
+                <code>menubar = Menu(root)</code> <br>
+                <code>root.config(menu=menubar)</code> <br> <br>
+                <code>filemenu = Menu(menubar, tearoff=0)</code> <br>
+                <code>filemenu.add_command(label="New")</code> <br>
+                <code>filemenu.add_command(label="Open")</code> <br>
+                <code>filemenu.add_command(label="Save")</code> <br>
+                <code>filemenu.add_separator()</code> <br>
+                <code>filemenu.add_command(label="Exit", command=root.quit</code> <br><br>
+                <code>editmenu = Menu(menubar)</code> <br>
+                <code>helpmenu = Menu(menubar)</code> <br> <br>
+                <code>menubar.add_cascade(label="File", menu=filemenu)</code> <br>
+                <code>menubar.add_cascade(label="Edit", menu=filemenu)</code> <br>
+                <code>menubar.add_cascade(label="Help", menu=filemenu)</code> <br> <br>
+                <code>root.mainloop()
+             </code>
+            </article>
+            <img src="/Imagenes/m.png" alt="m.png">
+
+            <hr>
+
+            <h1 id="VE">Ventana Emergente</h1>
+            <article class="codigo">
+                <code>from tkinter import *</code> <br>
+                <code>from tkinter import messagebox</code> <br><br>
+                <code>root = Tk()</code><br>
+                <code>def prueba():</code><br>
+                &nbsp;&nbsp;&nbsp;<code>messagebox.showinfo("Message","Hello World")</code><br>
+                <code>Button(root, text="Click Here", command=prueba).place(x=50)</code><br><br>
+                <code>root.mainloop()</code>
+            </article>
+
+            <h3>Tipos de ventanas emergentes</h3>
+            <h5> Ventana emergente con un mensaje de tipo advertencia</h5>
+
+            <article class="codigo">
+                <code>messagebox.showwarning("window title","message in the window")</code>
+            </article>
+
+            <h5>Ventana emergente con opcion de respuesta de reintentar o cancelar</h5>
+            <article class="codigo">
+                <code>messagebox.askretrycancel("window title","message in the window")</code>
+            </article>
+
+            <h5>Ventana emergente con opcion de respuesta de Si o No </h5>
+            <article class="codigo">
+                <code>messagebox.askyesno("window title","message in the window")</code>
+            </article>
+
+            <h5>Ventanas emergente con opcion de respuesta aceptar o cancelar</h5>
+            <article class="codigo">
+                <code>messagebox.askokcancel("window title","message in the window")</code>
+            </article>
+
+            <h5>Ventanas emergente con opcion de respuesta Si o No</h5>
+            <article class="codigo">
+                <code>messagebox.askquestion("window title","message in the window")</code>
+            </article>
+
+            <h5>Ventana emergente con un mensaje de error</h5>
+            <article class="codigo">
+                <code>messagebox.showerror("window title","message in the window")</code>
+            </article>
+
+            <hr>
+
+            <h1>Posicionamiento Relativo (Pack)</h1>
+            <p>
+                El posicionamiento de elementos con pack empaqueta el elemento en relación al elemento que lo contiene.
+            </p>
+
+            <h3>Ejemplo de uso</h3>
+
+            <article class="codigo">
+                <code>button = Button(root, text="Click").pack()</code>
+            </article>
+            
+            <hr>
+
+            <h1>Posicionamiento Adsoluto (Place)</h1>
+
+            <p>
+                El posicionamiento con place nos permite colocarle coordenadas X, Y en que queremos que se situé nuestro elemento 
+            </p>
+
+            <h3>Ejemplo de uso</h3>
+
+            <article class="codigo">
+                <code>Label(root, text="Hello World").place(x=30, y=60)</code>
+            </article>
+
+            <hr>
+
+            <h1>padx, pady</h1>
+
+            <p>
+                Esta propiedad sirve para establecer márgenes fuera de un elemento
+            </p>
+
+            <h3>Ejemplo de uso</h3>
+
+            <article class="codigo">
+                    <code>Button(root, text="Click").pack(padx=80, pady=80)</code>
+            </article>
+
+            <hr>
+
+            <h1>ipadx, ipady</h1>
+
+            <p>
+                Estas propiedades sirven para establecer márgenes a lo interno de un elemento.
+            </p>
+
+            <h3>Ejemplo de uso</h3>
+
+            <article class="codigo">
+                <code>Button(root, text="Click").pack(ipadx=80, ipady=80)</code>
+            </article>
+
+            <hr>
+
+            <h1>Posicionamiento con Side</h1>
+
+            <p>
+                Esta propiedad se utiliza para establecer el lado en que queremos que se situé un elemento se determina con Top, Bottom, Left, Right.
+            </p>
+
+            <h3>Ejemplo de uso</h3>
+
+            <article class="codigo">
+                <code>Button(root, text="Click").pack(side="left")</code>
+            </article>
+
+        </section>
+
+        <aside class="aside"></aside>
+
+        <footer class="footer">
+            <h1>Tutorial Basico</h1>
+            <a class="btn" href="informacion.html">Informacion</a>
+        </footer>
+    </div>
+</body>
+</html>
